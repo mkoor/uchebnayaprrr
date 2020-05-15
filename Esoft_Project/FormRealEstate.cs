@@ -470,5 +470,10 @@ namespace Esoft_Project
                 MessageBox.Show("Невозможно удалить, эта запись используется", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void textBoxAddress_City_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

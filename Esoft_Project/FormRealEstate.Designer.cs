@@ -61,6 +61,7 @@
             this.Rooms_Apartaments = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Floor_Apartaments = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listViewRealEstateSet_House = new System.Windows.Forms.ListView();
+            this.Address_City_House = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Address_Street_House = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Address_House_House = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Address_Number_House = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -68,15 +69,14 @@
             this.Coordinate_longitude_House = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalArea_House = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalFloors_House = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Address_City_House = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listViewRealEstateSet_Land = new System.Windows.Forms.ListView();
+            this.Address_City_Land = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Address_Street_Land = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Address_House_Land = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Address_Number_Land = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Coordinate_latitude_Land = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Coordinate_longitude_Land = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalArea_Lend = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Address_City_Land = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
@@ -92,6 +92,7 @@
             this.textBoxAddress_City.Name = "textBoxAddress_City";
             this.textBoxAddress_City.Size = new System.Drawing.Size(162, 21);
             this.textBoxAddress_City.TabIndex = 0;
+            this.textBoxAddress_City.TextChanged += new System.EventHandler(this.textBoxAddress_City_TextChanged);
             // 
             // textBoxAddress_Street
             // 
@@ -374,6 +375,11 @@
             this.listViewRealEstateSet_House.Visible = false;
             this.listViewRealEstateSet_House.SelectedIndexChanged += new System.EventHandler(this.listViewRealEstateSet_House_SelectedIndexChanged);
             // 
+            // Address_City_House
+            // 
+            this.Address_City_House.Text = "Город";
+            this.Address_City_House.Width = 79;
+            // 
             // Address_Street_House
             // 
             this.Address_Street_House.Text = "Улица";
@@ -409,11 +415,6 @@
             this.TotalFloors_House.Text = "Количество этажей";
             this.TotalFloors_House.Width = 115;
             // 
-            // Address_City_House
-            // 
-            this.Address_City_House.Text = "Город";
-            this.Address_City_House.Width = 79;
-            // 
             // listViewRealEstateSet_Land
             // 
             this.listViewRealEstateSet_Land.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -437,6 +438,11 @@
             this.listViewRealEstateSet_Land.View = System.Windows.Forms.View.Details;
             this.listViewRealEstateSet_Land.Visible = false;
             this.listViewRealEstateSet_Land.SelectedIndexChanged += new System.EventHandler(this.listViewRealEstateSet_Land_SelectedIndexChanged);
+            // 
+            // Address_City_Land
+            // 
+            this.Address_City_Land.Text = "Город";
+            this.Address_City_Land.Width = 119;
             // 
             // Address_Street_Land
             // 
@@ -467,11 +473,6 @@
             // 
             this.TotalArea_Lend.Text = "Площадь";
             this.TotalArea_Lend.Width = 122;
-            // 
-            // Address_City_Land
-            // 
-            this.Address_City_Land.Text = "Город";
-            this.Address_City_Land.Width = 119;
             // 
             // buttonAdd
             // 
