@@ -120,5 +120,15 @@ namespace Esoft_Project
                 MessageBox.Show("Невозможно удалить, эта запись используется!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
             }
         }
+
+        private void labelLastName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

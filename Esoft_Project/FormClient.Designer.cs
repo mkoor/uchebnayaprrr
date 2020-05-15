@@ -57,7 +57,7 @@
             // 
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFirstName.Location = new System.Drawing.Point(12, 9);
+            this.labelFirstName.Location = new System.Drawing.Point(12, 55);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(33, 15);
             this.labelFirstName.TabIndex = 0;
@@ -68,11 +68,12 @@
             // 
             this.labelLastName.AutoSize = true;
             this.labelLastName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLastName.Location = new System.Drawing.Point(8, 55);
+            this.labelLastName.Location = new System.Drawing.Point(9, 9);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(62, 15);
             this.labelLastName.TabIndex = 1;
             this.labelLastName.Text = "Фамилия";
+            this.labelLastName.Click += new System.EventHandler(this.labelLastName_Click);
             // 
             // labelMiddleName
             // 
@@ -106,17 +107,18 @@
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(12, 29);
+            this.textBoxFirstName.Location = new System.Drawing.Point(12, 75);
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(142, 23);
             this.textBoxFirstName.TabIndex = 5;
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(12, 74);
+            this.textBoxLastName.Location = new System.Drawing.Point(11, 27);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(142, 23);
             this.textBoxLastName.TabIndex = 6;
+            this.textBoxLastName.TextChanged += new System.EventHandler(this.textBoxLastName_TextChanged);
             // 
             // textBoxMiddleName
             // 

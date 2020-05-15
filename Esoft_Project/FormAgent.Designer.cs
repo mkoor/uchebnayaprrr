@@ -54,7 +54,7 @@
             // 
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFirstName.Location = new System.Drawing.Point(9, 81);
+            this.labelFirstName.Location = new System.Drawing.Point(9, 122);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(33, 15);
             this.labelFirstName.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(12, 99);
+            this.textBoxFirstName.Location = new System.Drawing.Point(12, 140);
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(142, 20);
             this.textBoxFirstName.TabIndex = 6;
@@ -161,7 +161,7 @@
             // 
             // textBoxDealShare
             // 
-            this.textBoxDealShare.Location = new System.Drawing.Point(11, 222);
+            this.textBoxDealShare.Location = new System.Drawing.Point(12, 222);
             this.textBoxDealShare.Name = "textBoxDealShare";
             this.textBoxDealShare.Size = new System.Drawing.Size(142, 20);
             this.textBoxDealShare.TabIndex = 22;
@@ -175,10 +175,11 @@
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(12, 140);
+            this.textBoxLastName.Location = new System.Drawing.Point(12, 101);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(142, 20);
             this.textBoxLastName.TabIndex = 19;
+            this.textBoxLastName.TextChanged += new System.EventHandler(this.textBoxLastName_TextChanged);
             // 
             // labelDealShare
             // 
@@ -204,11 +205,12 @@
             // 
             this.labelLastName.AutoSize = true;
             this.labelLastName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLastName.Location = new System.Drawing.Point(8, 122);
+            this.labelLastName.Location = new System.Drawing.Point(8, 83);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(62, 15);
             this.labelLastName.TabIndex = 15;
             this.labelLastName.Text = "Фамилия";
+            this.labelLastName.Click += new System.EventHandler(this.labelLastName_Click);
             // 
             // DealShare
             // 

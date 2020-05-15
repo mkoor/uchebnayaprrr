@@ -143,5 +143,15 @@ namespace Esoft_Project
         {
             
         }
+
+        private void labelLastName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
