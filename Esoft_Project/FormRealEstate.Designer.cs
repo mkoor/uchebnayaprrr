@@ -330,7 +330,7 @@
             // 
             // Coordinate_latitude_Apartaments
             // 
-            this.Coordinate_latitude_Apartaments.Text = "Ширина";
+            this.Coordinate_latitude_Apartaments.Text = "Широта";
             // 
             // Coordinate_longitude_Apartaments
             // 
@@ -532,7 +532,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(25, 415);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(180, 79);
