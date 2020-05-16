@@ -219,7 +219,7 @@
             this.labelCoordinate_latitude.Name = "labelCoordinate_latitude";
             this.labelCoordinate_latitude.Size = new System.Drawing.Size(48, 13);
             this.labelCoordinate_latitude.TabIndex = 14;
-            this.labelCoordinate_latitude.Text = "Ширина";
+            this.labelCoordinate_latitude.Text = "Широта";
             this.labelCoordinate_latitude.Click += new System.EventHandler(this.labelCoordinate_latitude_Click);
             // 
             // labelCoordinate_longitude
