@@ -25,7 +25,7 @@ namespace Esoft_Project
      
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            try // 
+            try 
             {
                 AgentSet agentSet = new AgentSet();
 
@@ -38,10 +38,7 @@ namespace Esoft_Project
                 {
                     throw new Exception("Поля ФИО не заполнены!");
                 }
-                if (agentSet.DealShare < 0 || agentSet.DealShare > 100)
-                {
-                    throw new Exception("Доля от комиссии не соответствутет диапозону от 0 до 100");
-                }
+                
 
                 if (textBoxDealShare.Text == "")
                 {
@@ -50,6 +47,11 @@ namespace Esoft_Project
                 else
                 {
                     agentSet.DealShare = Convert.ToInt32(textBoxDealShare.Text);
+                }
+
+                if (agentSet.DealShare < 0 || agentSet.DealShare > 100)
+                {
+                    throw new Exception("Доля от комиссии не соответствутет диапозону от 0 до 100");
                 }
                 Program.wftDb.AgentSet.Add(agentSet);
                 Program.wftDb.SaveChanges();
@@ -102,16 +104,22 @@ namespace Esoft_Project
         {
             if (listViewAgent.SelectedItems.Count == 1)
             {
-                AgentSet agentSet = listViewAgent.SelectedItems[0].Tag as AgentSet;
+                try
+                {
+                    AgentSet agentSet = listViewAgent.SelectedItems[0].Tag as AgentSet;
 
-                agentSet.FirstName = textBoxFirstName.Text;
-                agentSet.LastName = textBoxLastName.Text;
-                agentSet.MiddleName = textBoxMiddleName.Text;
-                agentSet.DealShare = Convert.ToInt32(textBoxDealShare.Text);
-
-                Program.wftDb.SaveChanges();
-
-                ShowAgent();
+                    agentSet.FirstName = textBoxFirstName.Text;
+                    agentSet.LastName = textBoxLastName.Text;
+                    agentSet.MiddleName = textBoxMiddleName.Text;
+                    agentSet.DealShare = Convert.ToInt32(textBoxDealShare.Text);
+                    if (agentSet.DealShare < 0 || agentSet.DealShare > 100)
+                    {
+                        throw new Exception("Доля от комиссии не соответствутет диапозону от 0 до 100");
+                    }
+                    Program.wftDb.SaveChanges();
+                    ShowAgent();
+                }
+                catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
