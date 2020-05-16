@@ -40,13 +40,13 @@
             this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MiddleName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DealShare = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxDealShare = new System.Windows.Forms.TextBox();
             this.textBoxMiddleName = new System.Windows.Forms.TextBox();
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.labelDealShare = new System.Windows.Forms.Label();
             this.labelMiddleName = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
-            this.DealShare = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEsoft)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,6 +159,11 @@
             this.LastName.Text = "Фамилия";
             this.LastName.Width = 121;
             // 
+            // DealShare
+            // 
+            this.DealShare.Text = "Доля от комиссии";
+            this.DealShare.Width = 126;
+            // 
             // textBoxDealShare
             // 
             this.textBoxDealShare.Location = new System.Drawing.Point(12, 222);
@@ -211,11 +216,6 @@
             this.labelLastName.TabIndex = 15;
             this.labelLastName.Text = "Фамилия";
             this.labelLastName.Click += new System.EventHandler(this.labelLastName_Click);
-            // 
-            // DealShare
-            // 
-            this.DealShare.Text = "Доля от комиссии";
-            this.DealShare.Width = 126;
             // 
             // FormAgent
             // 
