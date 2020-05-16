@@ -25,7 +25,7 @@ namespace Esoft_Project
      
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            try
+            try // 
             {
                 AgentSet agentSet = new AgentSet();
 
