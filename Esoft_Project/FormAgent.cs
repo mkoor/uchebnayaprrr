@@ -40,7 +40,7 @@ namespace Esoft_Project
                 }
                 if (agentSet.DealShare < 0 || agentSet.DealShare > 100)
                 {
-                    throw new Exception("Доля от комиссии не соответствутет диапозону от 0 дло 100");
+                    throw new Exception("Доля от комиссии не соответствутет диапозону от 0 до 100");
                 }
 
                 if (textBoxDealShare.Text == "")
