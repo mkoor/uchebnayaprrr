@@ -116,6 +116,10 @@ namespace Esoft_Project
                     {
                         throw new Exception("Доля от комиссии не соответствутет диапозону от 0 до 100");
                     }
+                    if (agentSet.FirstName == "" || agentSet.MiddleName == "" || agentSet.LastName == "")
+                    {
+                        throw new Exception("Поля ФИО не заполнены!");
+                    }
                     Program.wftDb.SaveChanges();
                     ShowAgent();
                 }
