@@ -50,7 +50,7 @@ namespace Esoft_Project
             comboBoxAgents.Items.Clear();
             foreach (AgentSet agentSet in Program.wftDb.AgentSet)
             {
-                string[] item = { agentSet.Id.ToString() + ".", agentSet.FirstName, agentSet.MiddleName, agentSet.LastName, agentSet.DealShare.ToString() };
+                string[] item = { agentSet.Id.ToString() + ".", agentSet.FirstName, agentSet.MiddleName, agentSet.LastName};
                 comboBoxAgents.Items.Add(string.Join(" ", item));
             }
         }
@@ -60,7 +60,7 @@ namespace Esoft_Project
             comboBoxClients.Items.Clear();
             foreach (ClientsSet clientsSet in Program.wftDb.ClientsSet)
             {
-                string[] item = { clientsSet.Id.ToString() + ".", clientsSet.FirstName, clientsSet.MiddleName, clientsSet.LastName, clientsSet.Phone, clientsSet.Email };
+                string[] item = { clientsSet.Id.ToString() + ".", clientsSet.FirstName, clientsSet.MiddleName, clientsSet.LastName};
                 comboBoxClients.Items.Add(string.Join(" ", item));
             }
         }
