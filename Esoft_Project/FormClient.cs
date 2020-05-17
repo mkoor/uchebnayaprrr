@@ -130,5 +130,20 @@ namespace Esoft_Project
         {
 
         }
+
+        private void textBoxFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMiddleName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMiddleName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

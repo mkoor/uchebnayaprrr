@@ -57,7 +57,7 @@
             // 
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFirstName.Location = new System.Drawing.Point(12, 55);
+            this.labelFirstName.Location = new System.Drawing.Point(8, 15);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(33, 15);
             this.labelFirstName.TabIndex = 0;
@@ -68,7 +68,7 @@
             // 
             this.labelLastName.AutoSize = true;
             this.labelLastName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLastName.Location = new System.Drawing.Point(9, 9);
+            this.labelLastName.Location = new System.Drawing.Point(8, 59);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(62, 15);
             this.labelLastName.TabIndex = 1;
@@ -79,11 +79,12 @@
             // 
             this.labelMiddleName.AutoSize = true;
             this.labelMiddleName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMiddleName.Location = new System.Drawing.Point(8, 100);
+            this.labelMiddleName.Location = new System.Drawing.Point(8, 103);
             this.labelMiddleName.Name = "labelMiddleName";
             this.labelMiddleName.Size = new System.Drawing.Size(63, 15);
             this.labelMiddleName.TabIndex = 2;
             this.labelMiddleName.Text = "Отчество";
+            this.labelMiddleName.Click += new System.EventHandler(this.labelMiddleName_Click);
             // 
             // labelPhone
             // 
@@ -107,14 +108,15 @@
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(12, 75);
+            this.textBoxFirstName.Location = new System.Drawing.Point(11, 33);
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(142, 23);
             this.textBoxFirstName.TabIndex = 5;
+            this.textBoxFirstName.TextChanged += new System.EventHandler(this.textBoxFirstName_TextChanged);
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(11, 27);
+            this.textBoxLastName.Location = new System.Drawing.Point(11, 77);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(142, 23);
             this.textBoxLastName.TabIndex = 6;
@@ -122,21 +124,22 @@
             // 
             // textBoxMiddleName
             // 
-            this.textBoxMiddleName.Location = new System.Drawing.Point(12, 119);
+            this.textBoxMiddleName.Location = new System.Drawing.Point(11, 119);
             this.textBoxMiddleName.Name = "textBoxMiddleName";
             this.textBoxMiddleName.Size = new System.Drawing.Size(142, 23);
             this.textBoxMiddleName.TabIndex = 7;
+            this.textBoxMiddleName.TextChanged += new System.EventHandler(this.textBoxMiddleName_TextChanged);
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(12, 164);
+            this.textBoxPhone.Location = new System.Drawing.Point(11, 163);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(142, 23);
             this.textBoxPhone.TabIndex = 8;
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(12, 209);
+            this.textBoxEmail.Location = new System.Drawing.Point(11, 208);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(142, 23);
             this.textBoxEmail.TabIndex = 9;

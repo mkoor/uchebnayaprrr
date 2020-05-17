@@ -54,7 +54,7 @@
             // 
             this.labelFirstName.AutoSize = true;
             this.labelFirstName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFirstName.Location = new System.Drawing.Point(9, 122);
+            this.labelFirstName.Location = new System.Drawing.Point(8, 81);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(33, 15);
             this.labelFirstName.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             // textBoxFirstName
             // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(12, 140);
+            this.textBoxFirstName.Location = new System.Drawing.Point(11, 99);
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(142, 20);
             this.textBoxFirstName.TabIndex = 6;
@@ -72,7 +72,7 @@
             // pictureBoxEsoft
             // 
             this.pictureBoxEsoft.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.pictureBoxEsoft.Location = new System.Drawing.Point(11, 12);
+            this.pictureBoxEsoft.Location = new System.Drawing.Point(17, 12);
             this.pictureBoxEsoft.Name = "pictureBoxEsoft";
             this.pictureBoxEsoft.Size = new System.Drawing.Size(137, 66);
             this.pictureBoxEsoft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,7 +183,7 @@
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(12, 101);
+            this.textBoxLastName.Location = new System.Drawing.Point(12, 140);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(142, 20);
             this.textBoxLastName.TabIndex = 19;
@@ -213,7 +213,7 @@
             // 
             this.labelLastName.AutoSize = true;
             this.labelLastName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLastName.Location = new System.Drawing.Point(8, 83);
+            this.labelLastName.Location = new System.Drawing.Point(8, 122);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(62, 15);
             this.labelLastName.TabIndex = 15;
