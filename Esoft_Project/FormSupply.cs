@@ -120,14 +120,22 @@ namespace Esoft_Project
         {
             if (listViewSupplySet.SelectedItems.Count == 1)
             {
-                SupplySet supply = listViewSupplySet.SelectedItems[0].Tag as SupplySet;
-                supply.IdAgent = Convert.ToInt32(comboBoxAgents.SelectedItem.ToString().Split('.')[0]);
-                supply.IdClient = Convert.ToInt32(comboBoxClients.SelectedItem.ToString().Split('.')[0]);
-                supply.IdRealEstate = Convert.ToInt32(comboBoxRealEstate.SelectedItem.ToString().Split('.')[0]);
-                supply.Price = Convert.ToInt64(textBoxPrice.Text);
-
-                Program.wftDb.SaveChanges();
-                ShowSupplySet();
+                try
+                {
+                    SupplySet supply = listViewSupplySet.SelectedItems[0].Tag as SupplySet;
+                    if (comboBoxAgents.Text == "" || comboBoxClients.Text == "" || comboBoxRealEstate.Text == "" ||textBoxPrice.Text == "")
+                    {
+                        throw new Exception("Обязательные поля не были заполнены!");
+                    }
+                    supply.IdAgent = Convert.ToInt32(comboBoxAgents.SelectedItem.ToString().Split('.')[0]);
+                    supply.IdClient = Convert.ToInt32(comboBoxClients.SelectedItem.ToString().Split('.')[0]);
+                    supply.IdRealEstate = Convert.ToInt32(comboBoxRealEstate.SelectedItem.ToString().Split('.')[0]);
+                    supply.Price = Convert.ToInt64(textBoxPrice.Text);
+                    
+                    Program.wftDb.SaveChanges();
+                    ShowSupplySet();
+                }
+                catch (Exception ex) { MessageBox.Show("" + ex.Message, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             }
         }   
 
