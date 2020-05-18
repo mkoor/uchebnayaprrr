@@ -329,7 +329,7 @@ namespace Esoft_Project
                         Program.wftDb.SaveChanges();
                         ShowRealEstateSet();
                     }
-                    catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                   catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
             }
             else if (comboBoxType.SelectedIndex == 1)
@@ -368,7 +368,7 @@ namespace Esoft_Project
                         Program.wftDb.SaveChanges();
                         ShowRealEstateSet();
                     }
-                    catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                   catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
                 }
             }
@@ -387,21 +387,41 @@ namespace Esoft_Project
                         realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                         realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                         realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
-                        if (realEstate.Coordinate_latitude < -90 || realEstate.Coordinate_latitude > 90)
+                        if (textBoxCoordinate_latitude.Text != "") 
                         {
-                            throw new Exception("Широта может принимать значения от -90 до +90");
+                            realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude);
                         }
-                        if (realEstate.Coordinate_longitude < -180 || realEstate.Coordinate_longitude > 180)
+                        if (realEstate.Coordinate_latitude < 90)
                         {
-                            throw new Exception("Долгота может принимать значения от -180 до +180");
+                            realEstate.Coordinate_latitude = -90;
+                            textBoxCoordinate_latitude.Text = "-90";
+                        }
+                        if (realEstate.Coordinate_latitude > 90)
+                        {
+                            realEstate.Coordinate_latitude = 90;
+                            textBoxCoordinate_latitude.Text = "90";
+                        }
+                        if (textBoxCoordinate_longitude.Text != "")
+                        {
+                            realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude);
+                        }
+                        if (realEstate.Coordinate_longitude < -180)
+                        {
+                            realEstate.Coordinate_longitude = -180;
+                            textBoxCoordinate_longitude.Text = "-180";
+                        }
+                        if (realEstate.Coordinate_latitude > 180)
+                        {
+                            realEstate.Coordinate_longitude = 180;
+                            textBoxCoordinate_longitude.Text = "180";
                         }
 
                         Program.wftDb.SaveChanges();
                         ShowRealEstateSet();
                     }
-                    catch (Exception ex)
+                   catch (Exception ex)
                     {
-                        MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                       MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 

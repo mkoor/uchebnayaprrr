@@ -45,8 +45,8 @@ namespace Esoft_Project
             }
             else
             {
-                comboBoxClients.Text = "";
-                comboBoxAgents.Text = "";
+                comboBoxClients.SelectedItem = null;
+                comboBoxAgents.SelectedItem = null;
                 textBoxMinPrice.Text = "";
                 textBoxMaxPrice.Text = "";
                 textBoxMinArea.Text = "";
@@ -179,64 +179,34 @@ namespace Esoft_Project
               
                 demand.IdAgent = Convert.ToInt32(comboBoxAgents.SelectedItem.ToString().Split('.')[0]);
                 demand.IdClient = Convert.ToInt32(comboBoxClients.SelectedItem.ToString().Split('.')[0]);
-                if (textBoxMaxArea.Text == "")
-                {
-                    textBoxMaxArea.Text = demand.MaxArea.ToString();
-                }
-                else { demand.MaxArea = Convert.ToInt32(textBoxMaxArea.Text); }
-                if (textBoxMaxPrice.Text == "")
-                {
-                    textBoxMaxPrice.Text = demand.MaxPrice.ToString();
-                }
-                else { demand.MaxPrice = Convert.ToInt32(textBoxMaxPrice.Text); }
-                if (textBoxMinArea.Text == "")
-                {
-                    textBoxMinArea.Text = demand.MinArea.ToString();
-                }
-                else { demand.MinArea = Convert.ToInt32(textBoxMinArea.Text); }
-                if (textBoxMinPrice.Text == "")
-                {
-                    textBoxMinPrice.Text = demand.MinPrice.ToString();
-                }
-                else { demand.MinPrice = Convert.ToInt32(textBoxMinPrice.Text); }
+                if (textBoxMaxArea.Text != "")
+                { demand.MaxArea = Convert.ToInt32(textBoxMaxArea.Text); }
+                if (textBoxMaxPrice.Text != "")
+                { demand.MaxPrice = Convert.ToInt32(textBoxMaxPrice.Text); }
+                if (textBoxMinArea.Text != "")
+                { demand.MinArea = Convert.ToInt32(textBoxMinArea.Text); }
+                if (textBoxMinPrice.Text != "")
+                { demand.MinPrice = Convert.ToInt32(textBoxMinPrice.Text); }
 
                 if (comboBoxType.SelectedIndex == 0)
                 {
                     demand.Type = 0;
-                    if (textBoxMinRooms.Text == "")
-                    {
-                        textBoxMinRooms.Text = demand.MinRooms.ToString();
-                    }
-                    else { demand.MinRooms = Convert.ToInt32(textBoxMinRooms.Text); }
-                    if (textBoxMaxRooms.Text == "")
-                    {
-                        textBoxMaxRooms.Text = demand.MaxRooms.ToString();
-                    }
-                    else { demand.MaxRooms = Convert.ToInt32(textBoxMaxRooms.Text); }
-                    if (textBoxMinFloor.Text == "")
-                    {
-                        textBoxMinFloor.Text = demand.MinFloor.ToString();
-                    }
-                    else { demand.MinFloor = Convert.ToInt32(textBoxMinFloor.Text); }
-                    if (textBoxMaxFloor.Text == "")
-                    {
-                        textBoxMaxFloor.Text = demand.MaxFloor.ToString();
-                    }
-                    else { demand.MaxFloor = Convert.ToInt32(textBoxMaxFloor.Text); }
+                    if (textBoxMinRooms.Text != "")
+                    { demand.MinRooms = Convert.ToInt32(textBoxMinRooms.Text); }
+                    if (textBoxMaxRooms.Text != "")
+                    { demand.MaxRooms = Convert.ToInt32(textBoxMaxRooms.Text); }
+                    if (textBoxMinFloor.Text != "")
+                    { demand.MinFloor = Convert.ToInt32(textBoxMinFloor.Text); }
+                    if (textBoxMaxFloor.Text != "")
+                    { demand.MaxFloor = Convert.ToInt32(textBoxMaxFloor.Text); }
                 }
                 else if (comboBoxType.SelectedIndex == 1) 
                 {
                     demand.Type = 1;
-                    if (textBoxMinFloors.Text == "")
-                    {
-                        textBoxMinFloors.Text = demand.MinFloors.ToString();
-                    }
-                    else { demand.MinFloors = Convert.ToInt32(textBoxMinFloors.Text); }
-                    if (textBoxMaxFloors.Text == "")
-                    {
-                        textBoxMaxFloors.Text = demand.MaxFloors.ToString();
-                    }
-                    else { demand.MaxFloors = Convert.ToInt32(textBoxMaxFloors.Text); }
+                    if (textBoxMinFloors.Text != "")
+                    { demand.MinFloors = Convert.ToInt32(textBoxMinFloors.Text); }
+                    if (textBoxMaxFloors.Text != "")
+                    { demand.MaxFloors = Convert.ToInt32(textBoxMaxFloors.Text); }
                 }
                 else
                 {
@@ -333,53 +303,29 @@ namespace Esoft_Project
                             throw new Exception("Обязательные поля не заполнены!");
                         }
 
-                        if (textBoxMinPrice.Text == "")
-                        {
-                            textBoxMinPrice.Text = demand.MinPrice.ToString();
-                        }
-                        else { demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text); }
+                        if (textBoxMinPrice.Text != "")
+                        { demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text); }
 
-                        if (textBoxMaxPrice.Text == "")
-                        {
-                            textBoxMaxPrice.Text = demand.MaxPrice.ToString();
-                        }
-                        else { demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text); }
+                        if (textBoxMaxPrice.Text != "")
+                        { demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text); }
 
-                        if (textBoxMinArea.Text == "")
-                        {
-                            textBoxMinArea.Text = demand.MinArea.ToString();
-                        }
-                        else { demand.MinArea = Convert.ToInt64(textBoxMinArea.Text); }
+                        if (textBoxMinArea.Text != "")
+                        { demand.MinArea = Convert.ToInt64(textBoxMinArea.Text); }
 
-                        if (textBoxMaxArea.Text == "")
-                        {
-                            textBoxMaxArea.Text = demand.MaxArea.ToString();
-                        }
-                        else { demand.MaxArea = Convert.ToInt64(textBoxMaxArea.Text); }
+                        if (textBoxMaxArea.Text != "")
+                        { demand.MaxArea = Convert.ToInt64(textBoxMaxArea.Text); }
 
-                        if (textBoxMinRooms.Text == "")
-                        {
-                            textBoxMinRooms.Text = demand.MinRooms.ToString();
-                        }
-                        else { demand.MinRooms = Convert.ToInt32(textBoxMinRooms.Text); }
+                        if (textBoxMinRooms.Text != "")
+                        { demand.MinRooms = Convert.ToInt32(textBoxMinRooms.Text); }
 
-                        if (textBoxMaxRooms.Text == "")
-                        {
-                            textBoxMaxRooms.Text = demand.MaxRooms.ToString();
-                        }
-                        else { demand.MaxRooms = Convert.ToInt32(textBoxMaxRooms.Text); }
+                        if (textBoxMaxRooms.Text != "")
+                        { demand.MaxRooms = Convert.ToInt32(textBoxMaxRooms.Text); }
 
-                        if (textBoxMinFloor.Text == "")
-                        {
-                            textBoxMinFloor.Text = demand.MinFloor.ToString();
-                        }
-                        else { demand.MinFloor = Convert.ToInt32(textBoxMinFloor.Text); }
+                        if (textBoxMinFloor.Text != "")
+                        { demand.MinFloor = Convert.ToInt32(textBoxMinFloor.Text); }
 
-                        if (textBoxMaxFloor.Text == "")
-                        {
-                            textBoxMaxFloor.Text = demand.MaxFloor.ToString();
-                        }
-                        else { demand.MaxFloor = Convert.ToInt32(textBoxMaxFloor.Text); }
+                        if (textBoxMaxFloor.Text != "")
+                        { demand.MaxFloor = Convert.ToInt32(textBoxMaxFloor.Text); }
 
                         Program.wftDb.SaveChanges();
                         ShowDemandSet();
@@ -400,41 +346,23 @@ namespace Esoft_Project
                             throw new Exception("Обязательные поля не заполнены!");
                         }
 
-                        if (textBoxMinPrice.Text == "")
-                        {
-                            textBoxMinPrice.Text = demand.MinPrice.ToString();
-                        }
-                        else { demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text); }
+                        if (textBoxMinPrice.Text != "")
+                        { demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text); }
 
-                        if (textBoxMaxPrice.Text == "")
-                        {
-                            textBoxMaxPrice.Text = demand.MaxPrice.ToString();
-                        }
-                        else { demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text); }
+                        if (textBoxMaxPrice.Text != "")
+                        { demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text); }
 
-                        if (textBoxMinArea.Text == "")
-                        {
-                            textBoxMinArea.Text = demand.MinArea.ToString();
-                        }
-                        else { demand.MinArea = Convert.ToInt64(textBoxMinArea.Text); }
+                        if (textBoxMinArea.Text != "")
+                        { demand.MinArea = Convert.ToInt64(textBoxMinArea.Text); }
 
-                        if (textBoxMaxArea.Text == "")
-                        {
-                            textBoxMaxArea.Text = demand.MaxArea.ToString();
-                        }
-                        else { demand.MaxArea = Convert.ToInt64(textBoxMaxArea.Text); }
+                        if (textBoxMaxArea.Text != "")
+                        { demand.MaxArea = Convert.ToInt64(textBoxMaxArea.Text); }
 
-                        if (textBoxMinFloors.Text == "")
-                        {
-                            textBoxMinFloors.Text = demand.MinFloors.ToString();
-                        }
-                        else { demand.MinFloors = Convert.ToInt32(textBoxMinFloors.Text); }
+                        if (textBoxMinFloors.Text != "")
+                        { demand.MinFloors = Convert.ToInt32(textBoxMinFloors.Text); }
 
-                        if (textBoxMaxFloors.Text == "")
-                        {
-                            textBoxMaxFloors.Text = demand.MaxFloors.ToString();
-                        }
-                        else { demand.MaxFloors = Convert.ToInt32(textBoxMaxFloors.Text); }
+                        if (textBoxMaxFloors.Text != "")
+                        { demand.MaxFloors = Convert.ToInt32(textBoxMaxFloors.Text); }
 
                         Program.wftDb.SaveChanges();
                         ShowDemandSet();
@@ -456,29 +384,17 @@ namespace Esoft_Project
                             throw new Exception("Обязательные поля не заполнены!");
                         }
 
-                        if (textBoxMinPrice.Text == "")
-                        {
-                            textBoxMinPrice.Text = demand.MinPrice.ToString();
-                        }
-                        else { demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text); }
+                        if (textBoxMinPrice.Text != "")
+                        { demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text); }
 
-                        if (textBoxMaxPrice.Text == "")
-                        {
-                            textBoxMaxPrice.Text = demand.MaxPrice.ToString();
-                        }
-                        else { demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text); }
+                        if (textBoxMaxPrice.Text != "")
+                        { demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text); }
 
-                        if (textBoxMinArea.Text == "")
-                        {
-                            textBoxMinArea.Text = demand.MinArea.ToString();
-                        }
-                        else { demand.MinArea = Convert.ToInt64(textBoxMinArea.Text); }
+                        if (textBoxMinArea.Text != "")
+                        { demand.MinArea = Convert.ToInt64(textBoxMinArea.Text); }
 
-                        if (textBoxMaxArea.Text == "")
-                        {
-                            textBoxMaxArea.Text = demand.MaxArea.ToString();
-                        }
-                        else { demand.MaxArea = Convert.ToInt64(textBoxMaxArea.Text); }
+                        if (textBoxMaxArea.Text != "")
+                        { demand.MaxArea = Convert.ToInt64(textBoxMaxArea.Text); }
 
                         Program.wftDb.SaveChanges();
                         ShowDemandSet();
