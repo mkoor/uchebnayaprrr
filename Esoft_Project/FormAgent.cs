@@ -165,5 +165,10 @@ namespace Esoft_Project
         {
 
         }
+
+        private void FormAgent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

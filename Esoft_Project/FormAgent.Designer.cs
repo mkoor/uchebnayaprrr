@@ -56,9 +56,9 @@
             this.labelFirstName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFirstName.Location = new System.Drawing.Point(8, 81);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(33, 15);
+            this.labelFirstName.Size = new System.Drawing.Size(42, 15);
             this.labelFirstName.TabIndex = 1;
-            this.labelFirstName.Text = "Имя";
+            this.labelFirstName.Text = "Имя *";
             this.labelFirstName.Click += new System.EventHandler(this.labelFirstName_Click);
             // 
             // textBoxFirstName
@@ -205,9 +205,9 @@
             this.labelMiddleName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMiddleName.Location = new System.Drawing.Point(8, 163);
             this.labelMiddleName.Name = "labelMiddleName";
-            this.labelMiddleName.Size = new System.Drawing.Size(63, 15);
+            this.labelMiddleName.Size = new System.Drawing.Size(72, 15);
             this.labelMiddleName.TabIndex = 16;
-            this.labelMiddleName.Text = "Отчество";
+            this.labelMiddleName.Text = "Отчество *";
             // 
             // labelLastName
             // 
@@ -215,9 +215,9 @@
             this.labelLastName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLastName.Location = new System.Drawing.Point(8, 122);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(62, 15);
+            this.labelLastName.Size = new System.Drawing.Size(71, 15);
             this.labelLastName.TabIndex = 15;
-            this.labelLastName.Text = "Фамилия";
+            this.labelLastName.Text = "Фамилия *";
             this.labelLastName.Click += new System.EventHandler(this.labelLastName_Click);
             // 
             // FormAgent
@@ -241,6 +241,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAgent";
             this.Text = "Риелторы";
+            this.Load += new System.EventHandler(this.FormAgent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEsoft)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

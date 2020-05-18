@@ -39,16 +39,16 @@
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.listViewSupplySet = new System.Windows.Forms.ListView();
             this.IDAgent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Agent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IDClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Client = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.IDRealEstate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.AddressRealEstate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Agent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.IDClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.AddressRealEstate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,9 +58,9 @@
             this.labelAgent.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAgent.Location = new System.Drawing.Point(9, 13);
             this.labelAgent.Name = "labelAgent";
-            this.labelAgent.Size = new System.Drawing.Size(56, 15);
+            this.labelAgent.Size = new System.Drawing.Size(65, 15);
             this.labelAgent.TabIndex = 0;
-            this.labelAgent.Text = "Риелтор";
+            this.labelAgent.Text = "Риелтор *";
             // 
             // labelClient
             // 
@@ -68,9 +68,9 @@
             this.labelClient.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelClient.Location = new System.Drawing.Point(9, 53);
             this.labelClient.Name = "labelClient";
-            this.labelClient.Size = new System.Drawing.Size(49, 15);
+            this.labelClient.Size = new System.Drawing.Size(58, 15);
             this.labelClient.TabIndex = 1;
-            this.labelClient.Text = "Клиент";
+            this.labelClient.Text = "Клиент *";
             // 
             // labelRealEstate
             // 
@@ -78,9 +78,9 @@
             this.labelRealEstate.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelRealEstate.Location = new System.Drawing.Point(9, 93);
             this.labelRealEstate.Name = "labelRealEstate";
-            this.labelRealEstate.Size = new System.Drawing.Size(143, 15);
+            this.labelRealEstate.Size = new System.Drawing.Size(152, 15);
             this.labelRealEstate.TabIndex = 2;
-            this.labelRealEstate.Text = "Объект недвижимости";
+            this.labelRealEstate.Text = "Объект недвижимости *";
             // 
             // labelPrice
             // 
@@ -88,16 +88,16 @@
             this.labelPrice.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPrice.Location = new System.Drawing.Point(9, 133);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(37, 15);
+            this.labelPrice.Size = new System.Drawing.Size(46, 15);
             this.labelPrice.TabIndex = 3;
-            this.labelPrice.Text = "Цена";
+            this.labelPrice.Text = "Цена *";
             // 
             // comboBoxAgents
             // 
             this.comboBoxAgents.FormattingEnabled = true;
             this.comboBoxAgents.Location = new System.Drawing.Point(12, 29);
             this.comboBoxAgents.Name = "comboBoxAgents";
-            this.comboBoxAgents.Size = new System.Drawing.Size(140, 21);
+            this.comboBoxAgents.Size = new System.Drawing.Size(149, 21);
             this.comboBoxAgents.TabIndex = 4;
             // 
             // comboBoxClients
@@ -105,7 +105,7 @@
             this.comboBoxClients.FormattingEnabled = true;
             this.comboBoxClients.Location = new System.Drawing.Point(12, 69);
             this.comboBoxClients.Name = "comboBoxClients";
-            this.comboBoxClients.Size = new System.Drawing.Size(140, 21);
+            this.comboBoxClients.Size = new System.Drawing.Size(149, 21);
             this.comboBoxClients.TabIndex = 5;
             // 
             // comboBoxRealEstate
@@ -113,14 +113,14 @@
             this.comboBoxRealEstate.FormattingEnabled = true;
             this.comboBoxRealEstate.Location = new System.Drawing.Point(12, 109);
             this.comboBoxRealEstate.Name = "comboBoxRealEstate";
-            this.comboBoxRealEstate.Size = new System.Drawing.Size(140, 21);
+            this.comboBoxRealEstate.Size = new System.Drawing.Size(149, 21);
             this.comboBoxRealEstate.TabIndex = 6;
             // 
             // textBoxPrice
             // 
             this.textBoxPrice.Location = new System.Drawing.Point(12, 149);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(140, 20);
+            this.textBoxPrice.Size = new System.Drawing.Size(149, 20);
             this.textBoxPrice.TabIndex = 7;
             // 
             // listViewSupplySet
@@ -137,10 +137,10 @@
             this.listViewSupplySet.FullRowSelect = true;
             this.listViewSupplySet.GridLines = true;
             this.listViewSupplySet.HideSelection = false;
-            this.listViewSupplySet.Location = new System.Drawing.Point(166, 10);
+            this.listViewSupplySet.Location = new System.Drawing.Point(177, 10);
             this.listViewSupplySet.MultiSelect = false;
             this.listViewSupplySet.Name = "listViewSupplySet";
-            this.listViewSupplySet.Size = new System.Drawing.Size(813, 199);
+            this.listViewSupplySet.Size = new System.Drawing.Size(802, 199);
             this.listViewSupplySet.TabIndex = 8;
             this.listViewSupplySet.UseCompatibleStateImageBehavior = false;
             this.listViewSupplySet.View = System.Windows.Forms.View.Details;
@@ -151,6 +151,16 @@
             this.IDAgent.Text = "Id риелтора";
             this.IDAgent.Width = 89;
             // 
+            // Agent
+            // 
+            this.Agent.Text = "ФИО риелтора";
+            this.Agent.Width = 102;
+            // 
+            // IDClient
+            // 
+            this.IDClient.Text = "Id клиента";
+            this.IDClient.Width = 80;
+            // 
             // Client
             // 
             this.Client.Text = "ФИО клиента";
@@ -160,6 +170,11 @@
             // 
             this.IDRealEstate.Text = "Id объекта недвижимости";
             this.IDRealEstate.Width = 176;
+            // 
+            // AddressRealEstate
+            // 
+            this.AddressRealEstate.Text = "Адрес объекта недвижимости";
+            this.AddressRealEstate.Width = 201;
             // 
             // Price
             // 
@@ -217,21 +232,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
-            // 
-            // Agent
-            // 
-            this.Agent.Text = "ФИО риелтора";
-            this.Agent.Width = 102;
-            // 
-            // IDClient
-            // 
-            this.IDClient.Text = "Id клиента";
-            this.IDClient.Width = 80;
-            // 
-            // AddressRealEstate
-            // 
-            this.AddressRealEstate.Text = "Адрес объекта недвижимости";
-            this.AddressRealEstate.Width = 201;
             // 
             // FormSupply
             // 

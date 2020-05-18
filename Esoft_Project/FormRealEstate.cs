@@ -299,8 +299,7 @@ namespace Esoft_Project
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
-        {
-            
+        {    
             if (comboBoxType.SelectedIndex == 0)
             {
                 if (listViewRealEstateSet_Apartment.SelectedItems.Count == 1)
@@ -326,13 +325,11 @@ namespace Esoft_Project
                         realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                         realEstate.Rooms = Convert.ToInt32(textBoxRooms.Text);
                         realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
-                        
 
                         Program.wftDb.SaveChanges();
                         ShowRealEstateSet();
                     }
                     catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-
                 }
             }
             else if (comboBoxType.SelectedIndex == 1)
@@ -367,7 +364,6 @@ namespace Esoft_Project
                             realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
                         }
                         realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
-                       
 
                         Program.wftDb.SaveChanges();
                         ShowRealEstateSet();
@@ -410,8 +406,6 @@ namespace Esoft_Project
                 }
 
             }
-
-
         }
 
         private void listViewRealEstateSet_Apartment_SelectedIndexChanged(object sender, EventArgs e)
