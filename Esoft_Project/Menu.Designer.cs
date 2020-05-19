@@ -142,7 +142,7 @@
             // 
             this.labelHello.AutoSize = true;
             this.labelHello.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHello.Location = new System.Drawing.Point(46, 6);
+            this.labelHello.Location = new System.Drawing.Point(55, 6);
             this.labelHello.Name = "labelHello";
             this.labelHello.Size = new System.Drawing.Size(50, 15);
             this.labelHello.TabIndex = 7;
