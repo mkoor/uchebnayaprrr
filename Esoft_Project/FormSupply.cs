@@ -21,7 +21,7 @@ namespace Esoft_Project
             ShowSupplySet();
         }
 
-        private void buttonDel_Click(object sender, EventArgs e)
+        private void buttonDel_Click(object sender, EventArgs e) //
         {
             try
             {

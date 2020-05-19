@@ -144,6 +144,6 @@ namespace Esoft_Project
         private void textBoxMiddleName_TextChanged(object sender, EventArgs e)
         {
 
-        }
+        } //
     }
 }

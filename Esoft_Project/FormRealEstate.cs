@@ -293,7 +293,7 @@ namespace Esoft_Project
             catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }         
         }
 
-        private void labelAddress_Number_Click(object sender, EventArgs e)
+        private void labelAddress_Number_Click(object sender, EventArgs e) //
         {
 
         }

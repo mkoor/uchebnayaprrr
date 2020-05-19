@@ -169,7 +169,7 @@ namespace Esoft_Project
                 Program.wftDb.SaveChanges();
                 ShowDealSet();
             }
-            else MessageBox.Show("Данные не выбраны", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Данные не выбраны", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -218,7 +218,7 @@ namespace Esoft_Project
                 comboBoxDemand.SelectedItem = null;
             }
             catch {MessageBox.Show("Невозможно удалить, эта запись используется"
-                ,"Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);}
+            ,"Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);} //
         }
     }
 }

@@ -7,7 +7,7 @@
       <Diagram DiagramId="d74978e4178d421bb1235f7aa2e8f9a2" Name="Diagram1">
         <EntityTypeShape EntityType="WFTutorialModel.AgentSet" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="WFTutorialModel.ClientsSet" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="WFTutorialModel.DealSet" Width="1.5" PointX="8.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WFTutorialModel.DealSet" Width="1.5" PointX="8.375" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WFTutorialModel.DemandSet" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="WFTutorialModel.RealEstateSet" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WFTutorialModel.SupplySet" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
