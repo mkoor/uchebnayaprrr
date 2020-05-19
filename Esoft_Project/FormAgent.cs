@@ -20,12 +20,12 @@ namespace Esoft_Project
 
         private void labelFirstName_Click(object sender, EventArgs e)
         {
-            
+
         }
-     
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 AgentSet agentSet = new AgentSet();
 
@@ -38,7 +38,7 @@ namespace Esoft_Project
                 {
                     throw new Exception("Поля ФИО не заполнены!");
                 }
-                
+
 
                 if (textBoxDealShare.Text == "")
                 {
@@ -71,7 +71,7 @@ namespace Esoft_Project
             {
                 AgentSet agentSet = listViewAgent.SelectedItems[0].Tag as AgentSet;
                 textBoxFirstName.Text = agentSet.FirstName;
-                textBoxLastName.Text = agentSet.LastName; 
+                textBoxLastName.Text = agentSet.LastName;
                 textBoxMiddleName.Text = agentSet.MiddleName;
                 textBoxDealShare.Text = agentSet.DealShare.ToString();
             }
@@ -107,25 +107,31 @@ namespace Esoft_Project
                 try
                 {
                     AgentSet agentSet = listViewAgent.SelectedItems[0].Tag as AgentSet;
+                    agentSet.FirstName = Convert.ToString(textBoxFirstName.Text);
+                    agentSet.LastName = Convert.ToString(textBoxLastName.Text);
+                    agentSet.MiddleName = Convert.ToString(textBoxMiddleName.Text);
+                    if (textBoxDealShare.Text == "")
+                    {
+                        agentSet.DealShare = null;
+                    }
+                    else agentSet.DealShare = Convert.ToInt32(textBoxDealShare.Text);
 
-                    agentSet.FirstName = textBoxFirstName.Text;
-                    agentSet.LastName = textBoxLastName.Text;
-                    agentSet.MiddleName = textBoxMiddleName.Text;
-                    agentSet.DealShare = Convert.ToInt32(textBoxDealShare.Text);
+                    if (textBoxFirstName.Text == "" || textBoxMiddleName.Text == "" || textBoxLastName.Text == "")
+                    {
+                        throw new Exception("ФИО не заполнено!");
+                    }
+
                     if (agentSet.DealShare < 0 || agentSet.DealShare > 100)
                     {
-                        throw new Exception("Доля от комиссии не соответствутет диапозону от 0 до 100");
+                        throw new Exception("Доля от комиссии может принимать значение от 0 до 100");
                     }
-                    if (agentSet.FirstName == "" || agentSet.MiddleName == "" || agentSet.LastName == "")
-                    {
-                        throw new Exception("Поля ФИО не заполнены!");
-                    }
+
                     Program.wftDb.SaveChanges();
                     ShowAgent();
-                }
-                catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            }
-        }
+
+                } catch (Exception ex) { MessageBox.Show("" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            }      
+        }  
 
         private void buttonDel_Click(object sender, EventArgs e)
         {

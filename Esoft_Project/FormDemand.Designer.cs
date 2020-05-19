@@ -39,6 +39,18 @@
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.labelType = new System.Windows.Forms.Label();
             this.listViewDemandSet_Apartment = new System.Windows.Forms.ListView();
+            this.IDAgent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FIOagent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IDClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FIOclient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MinPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaxPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MinArea = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaxArea = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MinRooms = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaxRooms = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MinFloor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaxFloor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelMinPrice = new System.Windows.Forms.Label();
             this.labelMaxPrice = new System.Windows.Forms.Label();
             this.labelMinArea = new System.Windows.Forms.Label();
@@ -59,18 +71,6 @@
             this.textBoxMinFloors = new System.Windows.Forms.TextBox();
             this.labelMaxFloors = new System.Windows.Forms.Label();
             this.textBoxMaxFloors = new System.Windows.Forms.TextBox();
-            this.IDAgent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FIOagent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.IDClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FIOclient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MinPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaxPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MinArea = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaxArea = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MinRooms = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaxRooms = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MinFloor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MaxFloor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listViewDemandSet_Land = new System.Windows.Forms.ListView();
             this.IDagent_L = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FIOagent_L = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -97,13 +97,13 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.buttonDel.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonDel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDel.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonDel.Location = new System.Drawing.Point(790, 520);
+            this.buttonDel.Location = new System.Drawing.Point(845, 520);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(150, 46);
+            this.buttonDel.Size = new System.Drawing.Size(181, 46);
             this.buttonDel.TabIndex = 32;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -111,7 +111,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.buttonEdit.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEdit.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -125,13 +125,13 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.buttonAdd.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonAdd.Location = new System.Drawing.Point(403, 520);
+            this.buttonAdd.Location = new System.Drawing.Point(332, 520);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(150, 46);
+            this.buttonAdd.Size = new System.Drawing.Size(181, 46);
             this.buttonAdd.TabIndex = 30;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -226,6 +226,62 @@
             this.listViewDemandSet_Apartment.UseCompatibleStateImageBehavior = false;
             this.listViewDemandSet_Apartment.View = System.Windows.Forms.View.Details;
             this.listViewDemandSet_Apartment.SelectedIndexChanged += new System.EventHandler(this.listViewRealEstateSet_Apartment_SelectedIndexChanged);
+            // 
+            // IDAgent
+            // 
+            this.IDAgent.Text = "Id риелтора";
+            this.IDAgent.Width = 88;
+            // 
+            // FIOagent
+            // 
+            this.FIOagent.Text = "ФИО риелтора";
+            this.FIOagent.Width = 104;
+            // 
+            // IDClient
+            // 
+            this.IDClient.Text = "Id клиента";
+            this.IDClient.Width = 82;
+            // 
+            // FIOclient
+            // 
+            this.FIOclient.Text = "ФИО клиента";
+            this.FIOclient.Width = 100;
+            // 
+            // MinPrice
+            // 
+            this.MinPrice.Text = "Мин цена";
+            this.MinPrice.Width = 83;
+            // 
+            // MaxPrice
+            // 
+            this.MaxPrice.Text = "Макс цена";
+            this.MaxPrice.Width = 83;
+            // 
+            // MinArea
+            // 
+            this.MinArea.Text = "Мин площадь";
+            this.MinArea.Width = 98;
+            // 
+            // MaxArea
+            // 
+            this.MaxArea.Text = "Макс площадь";
+            this.MaxArea.Width = 107;
+            // 
+            // MinRooms
+            // 
+            this.MinRooms.Text = "Мин кол-во комнат";
+            // 
+            // MaxRooms
+            // 
+            this.MaxRooms.Text = "Макс кол-во комнат";
+            // 
+            // MinFloor
+            // 
+            this.MinFloor.Text = "Мин этаж";
+            // 
+            // MaxFloor
+            // 
+            this.MaxFloor.Text = "Макс этаж";
             // 
             // labelMinPrice
             // 
@@ -401,62 +457,6 @@
             this.textBoxMaxFloors.Size = new System.Drawing.Size(214, 20);
             this.textBoxMaxFloors.TabIndex = 63;
             this.textBoxMaxFloors.Visible = false;
-            // 
-            // IDAgent
-            // 
-            this.IDAgent.Text = "Id риелтора";
-            this.IDAgent.Width = 88;
-            // 
-            // FIOagent
-            // 
-            this.FIOagent.Text = "ФИО риелтора";
-            this.FIOagent.Width = 104;
-            // 
-            // IDClient
-            // 
-            this.IDClient.Text = "Id клиента";
-            this.IDClient.Width = 82;
-            // 
-            // FIOclient
-            // 
-            this.FIOclient.Text = "ФИО клиента";
-            this.FIOclient.Width = 100;
-            // 
-            // MinPrice
-            // 
-            this.MinPrice.Text = "Мин цена";
-            this.MinPrice.Width = 83;
-            // 
-            // MaxPrice
-            // 
-            this.MaxPrice.Text = "Макс цена";
-            this.MaxPrice.Width = 83;
-            // 
-            // MinArea
-            // 
-            this.MinArea.Text = "Мин площадь";
-            this.MinArea.Width = 98;
-            // 
-            // MaxArea
-            // 
-            this.MaxArea.Text = "Макс площадь";
-            this.MaxArea.Width = 107;
-            // 
-            // MinRooms
-            // 
-            this.MinRooms.Text = "Мин кол-во комнат";
-            // 
-            // MaxRooms
-            // 
-            this.MaxRooms.Text = "Макс кол-во комнат";
-            // 
-            // MinFloor
-            // 
-            this.MinFloor.Text = "Мин этаж";
-            // 
-            // MaxFloor
-            // 
-            this.MaxFloor.Text = "Макс этаж";
             // 
             // listViewDemandSet_Land
             // 

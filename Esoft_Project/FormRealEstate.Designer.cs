@@ -476,11 +476,11 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.buttonAdd.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonAdd.Location = new System.Drawing.Point(273, 419);
+            this.buttonAdd.Location = new System.Drawing.Point(271, 424);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(181, 46);
             this.buttonAdd.TabIndex = 24;
@@ -490,11 +490,11 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.buttonEdit.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEdit.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonEdit.Location = new System.Drawing.Point(513, 419);
+            this.buttonEdit.Location = new System.Drawing.Point(511, 424);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(181, 46);
             this.buttonEdit.TabIndex = 25;
@@ -504,11 +504,11 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.buttonDel.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonDel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDel.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonDel.Location = new System.Drawing.Point(755, 419);
+            this.buttonDel.Location = new System.Drawing.Point(753, 424);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(181, 46);
             this.buttonDel.TabIndex = 26;
@@ -533,9 +533,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 415);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 417);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 79);
+            this.pictureBox1.Size = new System.Drawing.Size(193, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;

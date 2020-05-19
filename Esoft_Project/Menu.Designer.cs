@@ -36,6 +36,8 @@
             this.buttonOpenDemand = new System.Windows.Forms.Button();
             this.buttonOpenDeals = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.labelHello = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +48,7 @@
             this.buttonOpenClients.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOpenClients.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenClients.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonOpenClients.Location = new System.Drawing.Point(8, 122);
+            this.buttonOpenClients.Location = new System.Drawing.Point(8, 135);
             this.buttonOpenClients.Name = "buttonOpenClients";
             this.buttonOpenClients.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenClients.TabIndex = 2;
@@ -61,7 +63,7 @@
             this.buttonOpenAgents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOpenAgents.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenAgents.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonOpenAgents.Location = new System.Drawing.Point(8, 187);
+            this.buttonOpenAgents.Location = new System.Drawing.Point(8, 202);
             this.buttonOpenAgents.Name = "buttonOpenAgents";
             this.buttonOpenAgents.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenAgents.TabIndex = 1;
@@ -75,7 +77,7 @@
             this.buttonOpenRealEstates.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOpenRealEstates.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenRealEstates.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonOpenRealEstates.Location = new System.Drawing.Point(8, 250);
+            this.buttonOpenRealEstates.Location = new System.Drawing.Point(8, 267);
             this.buttonOpenRealEstates.Name = "buttonOpenRealEstates";
             this.buttonOpenRealEstates.Size = new System.Drawing.Size(265, 89);
             this.buttonOpenRealEstates.TabIndex = 3;
@@ -89,7 +91,7 @@
             this.buttonOpenSupplies.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOpenSupplies.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOpenSupplies.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonOpenSupplies.Location = new System.Drawing.Point(8, 357);
+            this.buttonOpenSupplies.Location = new System.Drawing.Point(8, 372);
             this.buttonOpenSupplies.Name = "buttonOpenSupplies";
             this.buttonOpenSupplies.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenSupplies.TabIndex = 4;
@@ -103,7 +105,7 @@
             this.buttonOpenDemand.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOpenDemand.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenDemand.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonOpenDemand.Location = new System.Drawing.Point(8, 421);
+            this.buttonOpenDemand.Location = new System.Drawing.Point(8, 436);
             this.buttonOpenDemand.Name = "buttonOpenDemand";
             this.buttonOpenDemand.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenDemand.TabIndex = 5;
@@ -117,28 +119,52 @@
             this.buttonOpenDeals.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOpenDeals.Font = new System.Drawing.Font("Roboto Light", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenDeals.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonOpenDeals.Location = new System.Drawing.Point(8, 484);
+            this.buttonOpenDeals.Location = new System.Drawing.Point(8, 501);
             this.buttonOpenDeals.Name = "buttonOpenDeals";
             this.buttonOpenDeals.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenDeals.TabIndex = 6;
             this.buttonOpenDeals.Text = "Сделки";
             this.buttonOpenDeals.UseVisualStyleBackColor = false;
+            this.buttonOpenDeals.Click += new System.EventHandler(this.buttonOpenDeals_Click);
             // 
             // Logo
             // 
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Logo.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.Logo.Location = new System.Drawing.Point(12, 12);
+            this.Logo.Location = new System.Drawing.Point(16, 37);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(255, 104);
+            this.Logo.Size = new System.Drawing.Size(245, 92);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
+            // 
+            // labelHello
+            // 
+            this.labelHello.AutoSize = true;
+            this.labelHello.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHello.Location = new System.Drawing.Point(46, 6);
+            this.labelHello.Name = "labelHello";
+            this.labelHello.Size = new System.Drawing.Size(50, 15);
+            this.labelHello.TabIndex = 7;
+            this.labelHello.Text = "Привет";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(-1, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(283, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "---------------------------------------------------------------------------------" +
+    "-----------";
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 561);
+            this.ClientSize = new System.Drawing.Size(281, 561);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelHello);
             this.Controls.Add(this.buttonOpenDeals);
             this.Controls.Add(this.buttonOpenDemand);
             this.Controls.Add(this.buttonOpenSupplies);
@@ -153,6 +179,7 @@
             this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -165,6 +192,8 @@
         private System.Windows.Forms.Button buttonOpenSupplies;
         private System.Windows.Forms.Button buttonOpenDemand;
         private System.Windows.Forms.Button buttonOpenDeals;
+        private System.Windows.Forms.Label labelHello;
+        private System.Windows.Forms.Label label1;
     }
 }
 

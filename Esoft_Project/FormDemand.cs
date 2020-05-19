@@ -181,32 +181,42 @@ namespace Esoft_Project
                 demand.IdClient = Convert.ToInt32(comboBoxClients.SelectedItem.ToString().Split('.')[0]);
                 if (textBoxMaxArea.Text != "")
                 { demand.MaxArea = Convert.ToInt32(textBoxMaxArea.Text); }
+                else  demand.MaxArea = null; 
                 if (textBoxMaxPrice.Text != "")
                 { demand.MaxPrice = Convert.ToInt32(textBoxMaxPrice.Text); }
+                else demand.MaxPrice = null;
                 if (textBoxMinArea.Text != "")
                 { demand.MinArea = Convert.ToInt32(textBoxMinArea.Text); }
+                else demand.MinArea = null;
                 if (textBoxMinPrice.Text != "")
                 { demand.MinPrice = Convert.ToInt32(textBoxMinPrice.Text); }
+                else demand.MinPrice = null;
 
                 if (comboBoxType.SelectedIndex == 0)
                 {
                     demand.Type = 0;
                     if (textBoxMinRooms.Text != "")
                     { demand.MinRooms = Convert.ToInt32(textBoxMinRooms.Text); }
+                    else demand.MinRooms = null;
                     if (textBoxMaxRooms.Text != "")
                     { demand.MaxRooms = Convert.ToInt32(textBoxMaxRooms.Text); }
+                    else demand.MaxRooms = null;
                     if (textBoxMinFloor.Text != "")
                     { demand.MinFloor = Convert.ToInt32(textBoxMinFloor.Text); }
+                    else demand.MinFloor = null;
                     if (textBoxMaxFloor.Text != "")
                     { demand.MaxFloor = Convert.ToInt32(textBoxMaxFloor.Text); }
+                    else demand.MaxFloor = null;
                 }
                 else if (comboBoxType.SelectedIndex == 1) 
                 {
                     demand.Type = 1;
                     if (textBoxMinFloors.Text != "")
                     { demand.MinFloors = Convert.ToInt32(textBoxMinFloors.Text); }
+                    else demand.MinFloors = null;
                     if (textBoxMaxFloors.Text != "")
                     { demand.MaxFloors = Convert.ToInt32(textBoxMaxFloors.Text); }
+                    else demand.MaxFloors = null;
                 }
                 else
                 {
@@ -305,27 +315,35 @@ namespace Esoft_Project
 
                         if (textBoxMinPrice.Text != "")
                         { demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text); }
+                        else demand.MinPrice = null;
 
                         if (textBoxMaxPrice.Text != "")
                         { demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text); }
+                        else demand.MaxPrice = null;
 
                         if (textBoxMinArea.Text != "")
                         { demand.MinArea = Convert.ToInt64(textBoxMinArea.Text); }
+                        else demand.MinArea = null;
 
                         if (textBoxMaxArea.Text != "")
                         { demand.MaxArea = Convert.ToInt64(textBoxMaxArea.Text); }
+                        else demand.MaxArea = null;
 
                         if (textBoxMinRooms.Text != "")
                         { demand.MinRooms = Convert.ToInt32(textBoxMinRooms.Text); }
+                        else demand.MinRooms = null;
 
                         if (textBoxMaxRooms.Text != "")
                         { demand.MaxRooms = Convert.ToInt32(textBoxMaxRooms.Text); }
+                        else demand.MaxRooms = null;
 
                         if (textBoxMinFloor.Text != "")
                         { demand.MinFloor = Convert.ToInt32(textBoxMinFloor.Text); }
+                        else demand.MinFloor = null;
 
                         if (textBoxMaxFloor.Text != "")
                         { demand.MaxFloor = Convert.ToInt32(textBoxMaxFloor.Text); }
+                        else demand.MaxFloor = null;
 
                         Program.wftDb.SaveChanges();
                         ShowDemandSet();
@@ -348,21 +366,27 @@ namespace Esoft_Project
 
                         if (textBoxMinPrice.Text != "")
                         { demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text); }
+                        else demand.MinPrice = null;
 
                         if (textBoxMaxPrice.Text != "")
                         { demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text); }
+                        else demand.MaxPrice = null;
 
                         if (textBoxMinArea.Text != "")
                         { demand.MinArea = Convert.ToInt64(textBoxMinArea.Text); }
+                        else demand.MinArea = null;
 
                         if (textBoxMaxArea.Text != "")
                         { demand.MaxArea = Convert.ToInt64(textBoxMaxArea.Text); }
+                        else demand.MaxArea = null;
 
                         if (textBoxMinFloors.Text != "")
                         { demand.MinFloors = Convert.ToInt32(textBoxMinFloors.Text); }
+                        else demand.MinFloors = null;
 
                         if (textBoxMaxFloors.Text != "")
                         { demand.MaxFloors = Convert.ToInt32(textBoxMaxFloors.Text); }
+                        else demand.MaxFloors = null;
 
                         Program.wftDb.SaveChanges();
                         ShowDemandSet();
@@ -386,15 +410,19 @@ namespace Esoft_Project
 
                         if (textBoxMinPrice.Text != "")
                         { demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text); }
+                        else demand.MinPrice = null;
 
                         if (textBoxMaxPrice.Text != "")
                         { demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text); }
+                        else demand.MaxPrice = null;
 
                         if (textBoxMinArea.Text != "")
                         { demand.MinArea = Convert.ToInt64(textBoxMinArea.Text); }
+                        else demand.MinArea = null;
 
                         if (textBoxMaxArea.Text != "")
                         { demand.MaxArea = Convert.ToInt64(textBoxMaxArea.Text); }
+                        else demand.MaxArea = null;
 
                         Program.wftDb.SaveChanges();
                         ShowDemandSet();
