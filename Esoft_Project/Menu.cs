@@ -69,5 +69,12 @@ namespace Esoft_Project
             Form formDeal = new FormDeal();
             formDeal.Show();
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            FormAuthorization auto = new FormAuthorization();
+            this.Close();
+            auto.Show();
+        }
     }
 }

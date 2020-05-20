@@ -38,6 +38,7 @@
             this.Logo = new System.Windows.Forms.PictureBox();
             this.labelHello = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,11 +159,27 @@
             this.label1.Text = "---------------------------------------------------------------------------------" +
     "-----------";
             // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExit.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonExit.Location = new System.Drawing.Point(220, 3);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(53, 22);
+            this.buttonExit.TabIndex = 9;
+            this.buttonExit.Text = "Выход";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 561);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelHello);
             this.Controls.Add(this.buttonOpenDeals);
@@ -194,6 +211,7 @@
         private System.Windows.Forms.Button buttonOpenDeals;
         private System.Windows.Forms.Label labelHello;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonExit;
     }
 }
 
