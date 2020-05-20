@@ -312,8 +312,37 @@ namespace Esoft_Project
                         realEstate.Address_House = textBoxAddress_House.Text;
                         realEstate.Address_Street = textBoxAddress_Street.Text;
                         realEstate.Address_Number = textBoxAddress_Number.Text;
-                        realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
-                        realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
+
+                        if (textBoxCoordinate_latitude.Text != "")
+                        {
+                            realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
+                        }
+                        else realEstate.Coordinate_latitude = null;
+
+                        if (textBoxCoordinate_longitude.Text != "")
+                        {
+                            realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
+                        }
+                        else realEstate.Coordinate_longitude = null;
+
+                        if (textBoxTotalArea.Text != "")
+                        {
+                            realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
+                        }
+                        else realEstate.TotalArea = null;
+
+                        if (textBoxRooms.Text != "")
+                        {
+                            realEstate.Rooms = Convert.ToInt32(textBoxRooms.Text);
+                        }
+                        else realEstate.Rooms = null;
+
+                        if (textBoxFloor.Text != "")
+                        {
+                            realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
+                        }
+                        else realEstate.Floor = null;
+
                         if (realEstate.Coordinate_latitude < -90 || realEstate.Coordinate_latitude > 90)
                         {
                             throw new Exception("Широта может принимать значения от -90 до +90");
@@ -322,9 +351,6 @@ namespace Esoft_Project
                         {
                             throw new Exception("Долгота может принимать значения от -180 до +180");
                         }
-                        realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
-                        realEstate.Rooms = Convert.ToInt32(textBoxRooms.Text);
-                        realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
 
                         Program.wftDb.SaveChanges();
                         ShowRealEstateSet();
@@ -344,9 +370,32 @@ namespace Esoft_Project
                         realEstate.Address_City = textBoxAddress_City.Text;
                         realEstate.Address_House = textBoxAddress_House.Text;
                         realEstate.Address_Street = textBoxAddress_Street.Text;
-                        realEstate.Address_Number = textBoxAddress_Number.Text;
-                        realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
-                        realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
+                        realEstate.Address_Number = textBoxAddress_Number.Text;   
+
+                        if (textBoxCoordinate_latitude.Text != "")
+                        {
+                            realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
+                        }
+                        else realEstate.Coordinate_latitude = null;
+
+                        if (textBoxCoordinate_longitude.Text != "")
+                        {
+                            realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
+                        }
+                        else realEstate.Coordinate_longitude = null;
+
+                        if (textBoxTotalArea.Text != "")
+                        {
+                            realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
+                        }
+                        else realEstate.TotalArea = null;
+
+                        if (textBoxTotalFloors.Text != "")
+                        {
+                            realEstate.TotalFloors = Convert.ToInt32(textBoxTotalFloors.Text);
+                        }
+                        else realEstate.TotalFloors = null;
+
                         if (realEstate.Coordinate_latitude < -90 || realEstate.Coordinate_latitude > 90)
                         {
                             throw new Exception("Широта может принимать значения от -90 до +90");
@@ -355,15 +404,6 @@ namespace Esoft_Project
                         {
                             throw new Exception("Долгота может принимать значения от -180 до +180");
                         }
-                        if (textBoxFloor.Text == "")
-                        {
-                            textBoxFloor.Text = realEstate.Floor.ToString();
-                        }
-                        else
-                        {
-                            realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
-                        }
-                        realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
 
                         Program.wftDb.SaveChanges();
                         ShowRealEstateSet();
@@ -384,36 +424,32 @@ namespace Esoft_Project
                         realEstate.Address_House = textBoxAddress_House.Text;
                         realEstate.Address_Street = textBoxAddress_Street.Text;
                         realEstate.Address_Number = textBoxAddress_Number.Text;
-                        realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
-                        realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
-                        realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
-                        if (textBoxCoordinate_latitude.Text != "") 
+
+                        if (textBoxCoordinate_latitude.Text != "")
                         {
-                            realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude);
+                            realEstate.Coordinate_latitude = Convert.ToDouble(textBoxCoordinate_latitude.Text);
                         }
-                        if (realEstate.Coordinate_latitude < 90)
-                        {
-                            realEstate.Coordinate_latitude = -90;
-                            textBoxCoordinate_latitude.Text = "-90";
-                        }
-                        if (realEstate.Coordinate_latitude > 90)
-                        {
-                            realEstate.Coordinate_latitude = 90;
-                            textBoxCoordinate_latitude.Text = "90";
-                        }
+                        else realEstate.Coordinate_latitude = null;
+
                         if (textBoxCoordinate_longitude.Text != "")
                         {
-                            realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude);
+                            realEstate.Coordinate_longitude = Convert.ToDouble(textBoxCoordinate_longitude.Text);
                         }
-                        if (realEstate.Coordinate_longitude < -180)
+                        else realEstate.Coordinate_longitude = null;
+
+                        if (textBoxTotalArea.Text != "")
                         {
-                            realEstate.Coordinate_longitude = -180;
-                            textBoxCoordinate_longitude.Text = "-180";
+                            realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                         }
-                        if (realEstate.Coordinate_latitude > 180)
+                        else realEstate.TotalArea = null;
+
+                        if (realEstate.Coordinate_latitude < -90 || realEstate.Coordinate_latitude > 90)
                         {
-                            realEstate.Coordinate_longitude = 180;
-                            textBoxCoordinate_longitude.Text = "180";
+                            throw new Exception("Широта может принимать значения от -90 до +90");
+                        }
+                        if (realEstate.Coordinate_longitude < -180 || realEstate.Coordinate_longitude > 180)
+                        {
+                            throw new Exception("Долгота может принимать значения от -180 до +180");
                         }
 
                         Program.wftDb.SaveChanges();

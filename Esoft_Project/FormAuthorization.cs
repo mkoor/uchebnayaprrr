@@ -58,14 +58,17 @@ namespace Esoft_Project
                 }
                 else
                 {
-                    MessageBox.Show("Данные введены верно", "Пользователь найден", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Menu menu = new Menu();
                     menu.Show();
                     this.Hide();
-
                 }
             }
-        } //
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+       
+        }
     }
     
 }

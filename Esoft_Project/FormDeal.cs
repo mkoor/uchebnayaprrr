@@ -181,8 +181,9 @@ namespace Esoft_Project
                 deal.IdSupply = Convert.ToInt32(comboBoxSupply.SelectedItem.ToString().Split('.')[0]);
                 else MessageBox.Show("Данные не выбраны!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (comboBoxDemand.Text != "")
-                    deal.IdDemand = Convert.ToInt32(comboBoxDemand.SelectedItem.ToString().Split('.')[0]);
+                deal.IdDemand = Convert.ToInt32(comboBoxDemand.SelectedItem.ToString().Split('.')[0]);
                 else MessageBox.Show("Данные не выбраны!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 Program.wftDb.SaveChanges();
                 ShowDealSet();
             }
@@ -214,11 +215,32 @@ namespace Esoft_Project
                     Program.wftDb.SaveChanges();
                     ShowDealSet();
                 }
+          
                 comboBoxSupply.SelectedItem = null;
                 comboBoxDemand.SelectedItem = null;
             }
             catch {MessageBox.Show("Невозможно удалить, эта запись используется"
             ,"Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);} //
+        }
+
+        private void textBoxSellerCompanyDeductions_TextChanged(object sender, EventArgs e)
+        {
+            textBoxSellerCompanyDeductions.Enabled = false;
+        }
+
+        private void textBoxAgentSellerDeductions_TextChanged(object sender, EventArgs e)
+        {
+            textBoxAgentSellerDeductions.Enabled = false;
+        }
+
+        private void textBoxCustomerCompanyDeductions_TextChanged(object sender, EventArgs e)
+        {
+            textBoxCustomerCompanyDeductions.Enabled = false;
+        }
+
+        private void textBoxAgentCustomerDeductions_TextChanged(object sender, EventArgs e)
+        {
+            textBoxAgentCustomerDeductions.Enabled = false;
         }
     }
 }

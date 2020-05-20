@@ -61,6 +61,7 @@
             this.textBoxSellerCompanyDeductions.Name = "textBoxSellerCompanyDeductions";
             this.textBoxSellerCompanyDeductions.Size = new System.Drawing.Size(252, 20);
             this.textBoxSellerCompanyDeductions.TabIndex = 53;
+            this.textBoxSellerCompanyDeductions.TextChanged += new System.EventHandler(this.textBoxSellerCompanyDeductions_TextChanged);
             // 
             // labelSellerCompanyDeductions
             // 
@@ -96,9 +97,9 @@
             this.labelDemand.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDemand.Location = new System.Drawing.Point(9, 48);
             this.labelDemand.Name = "labelDemand";
-            this.labelDemand.Size = new System.Drawing.Size(84, 15);
+            this.labelDemand.Size = new System.Drawing.Size(93, 15);
             this.labelDemand.TabIndex = 49;
-            this.labelDemand.Text = "Потребность";
+            this.labelDemand.Text = "Потребность *";
             // 
             // labelSupply
             // 
@@ -106,9 +107,9 @@
             this.labelSupply.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSupply.Location = new System.Drawing.Point(9, 6);
             this.labelSupply.Name = "labelSupply";
-            this.labelSupply.Size = new System.Drawing.Size(89, 15);
+            this.labelSupply.Size = new System.Drawing.Size(98, 15);
             this.labelSupply.TabIndex = 48;
-            this.labelSupply.Text = "Предложение";
+            this.labelSupply.Text = "Предложение *";
             // 
             // textBoxAgentSellerDeductions
             // 
@@ -116,6 +117,7 @@
             this.textBoxAgentSellerDeductions.Name = "textBoxAgentSellerDeductions";
             this.textBoxAgentSellerDeductions.Size = new System.Drawing.Size(252, 20);
             this.textBoxAgentSellerDeductions.TabIndex = 55;
+            this.textBoxAgentSellerDeductions.TextChanged += new System.EventHandler(this.textBoxAgentSellerDeductions_TextChanged);
             // 
             // labelAgentSellerDeductions
             // 
@@ -133,6 +135,7 @@
             this.textBoxAgentCustomerDeductions.Name = "textBoxAgentCustomerDeductions";
             this.textBoxAgentCustomerDeductions.Size = new System.Drawing.Size(252, 20);
             this.textBoxAgentCustomerDeductions.TabIndex = 59;
+            this.textBoxAgentCustomerDeductions.TextChanged += new System.EventHandler(this.textBoxAgentCustomerDeductions_TextChanged);
             // 
             // labelAgentCustomerDeductions
             // 
@@ -150,6 +153,7 @@
             this.textBoxCustomerCompanyDeductions.Name = "textBoxCustomerCompanyDeductions";
             this.textBoxCustomerCompanyDeductions.Size = new System.Drawing.Size(252, 20);
             this.textBoxCustomerCompanyDeductions.TabIndex = 57;
+            this.textBoxCustomerCompanyDeductions.TextChanged += new System.EventHandler(this.textBoxCustomerCompanyDeductions_TextChanged);
             // 
             // labelCustomerCompanyDeductions
             // 
